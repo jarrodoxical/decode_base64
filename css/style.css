@@ -1,0 +1,62 @@
+html {
+  background-color: #0e2439;
+}
+
+body {
+  margin: 0px;
+  padding: 0 8px 0 8px;
+}
+
+body,
+textarea {
+  font-family: "Work Sans", sans-serif;
+  color: #9cb3c9;
+}
+
+#user_input,
+#result,
+#result_text {
+  width: calc(95vw - 50px);
+  margin: 20px 20px 20px 10px;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 6px 10px;
+  background: #fff;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+#process {
+  margin-bottom: 20px;
+}
+
+#user_input {
+  background-color: #233b53;
+  height: 80px;
+}
+
+#result,
+#result_text {
+  background-color: #233b53;
+  min-height: 400px;
+  max-width: 100%;
+  overflow-x: visible;
+  font-family: Consolas, monaco, monospace;
+  word-wrap: break-word;
+}
+body a {
+  color: #fff;
+}
+
+.body p {
+  word-wrap: break-word;
+}
+
+#main {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.header {
+  color: rgb(71, 153, 235);
+}
