@@ -62,22 +62,22 @@ window.addEventListener("load", function() {
   var remoteInput = getParameterByName("remoteinput"); // "lorem"
   var input = getParameterByName("input"); // "lorem"
   var other = window.document.location.toString().split('?');//window.location.search.substr(1);
-  if (!remoteInput && !input && other){
-	var last = other[other.length - 1];  
-	console.log("last",last);
-	if (last){
-		if (last.startsWith('http')){
-			remoteInput = last
-		} else {
-			input = last
-		}
-	}
+  if (!remoteInput && !input && other.length>1){
+  	var last = other[other.length - 1];
+  	console.log("last",last);
+  	if (last){
+  		if (last.startsWith('http')){
+  			remoteInput = last
+  		} else {
+  			input = last
+  		}
+  	}
     /*var path = window.document.location.pathname;
     console.log("path",path);
     var res = path.split("/");
     console.log("res",res[res.length - 1]);*/
 	//needs a server for path mgmt
-	
+
   }
   console.log("All assets are loaded");
   //remoteInput?remoteInput:remoteInput="https://pastebin.com/raw/xYRJHjgX";
