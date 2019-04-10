@@ -1,6 +1,7 @@
 var textPlaceholder =
   "Type input here, or drag file here for base64 file conversion";
 var filePlaceholder = "Drop file here to convert to Base64 string";
+var host = window.document.URL.toString().split('?')[0];
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -79,6 +80,14 @@ window.addEventListener("load", function() {
 	//needs a server for path mgmt
 
   }
+
+  //host
+  var hst_str = host+"?"+"aHR0cHM6Ly9tZWdhLm56LyNyb2NrcyFCdXREb250UG9zdERpcmVjdExpbmtzQ29zVGhlblRoZXlDYW5FYXNpbHlCZVRha2VuRG93bi1FbmNvZGVUaGVtSW5zdGVhZAoKCgo="
+  $("#std_input").prop("href", hst_str);
+  $("#std_input").text(hst_str);
+  var hst_str2 = host+"?"+"https://pastebin.com/raw/xYRJHjgX"
+  $("#rmt_input").prop("href", hst_str2);
+  $("#rmt_input").text(hst_str2);
   console.log("All assets are loaded");
   //remoteInput?remoteInput:remoteInput="https://pastebin.com/raw/xYRJHjgX";
   console.log(remoteInput);
